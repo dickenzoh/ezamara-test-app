@@ -11,6 +11,8 @@ import ContinentStackNavigator from "./stack-navigators/ContinentStackNavigator"
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { TouchableOpacity } from "react-native";
 import { UserContext } from "../UserContext";
+import { ImageBackground } from "react-native";
+import { Image } from "react-native";
 
 const Drawer = createDrawerNavigator();
 
@@ -26,7 +28,7 @@ const DrawerNavigator = () => {
       <DrawerContentScrollView contentContainerStyle={{ flex: 1 }}>
         <View
           style={{
-            backgroundColor: "#4f4f4f",
+            backgroundColor: "#43ae37",
             height: 100,
             justifyContent: "center",
             alignItems: "center",

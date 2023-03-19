@@ -7,14 +7,9 @@ import InputField from "../../componets/InputField";
 import { Image } from "react-native";
 import { UserContext } from "../../UserContext";
 
-const initialState = {
-  username: "",
-  pass: "",
-};
-
 const LoginStackNavigator = ({ navigation }) => {
-  const [username, setUsername] = useState();
-  const [pass, setPass] = useState();
+  const [username, setUsername] = useState("kminchelle");
+  const [pass, setPass] = useState("0lelplR");
   const [error, setError] = useState("");
 
   const { setUser } = useContext(UserContext);
