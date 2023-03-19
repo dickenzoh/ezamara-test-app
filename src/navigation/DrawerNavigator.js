@@ -9,11 +9,19 @@ import HomeStackNavigator from "./stack-navigators/HomeStackNavigator";
 import StaffStackNavigator from "./stack-navigators/StaffStackNavigator";
 import ContinentStackNavigator from "./stack-navigators/ContinentStackNavigator";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import { TouchableOpacity } from "react-native";
+import { UserContext } from "../UserContext";
 
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   const DrawerHeaderContent = (props) => {
+    const { setUser } = React.useContext(UserContext);
+
+    const handleSignout = () => {
+      setUser(null);
+    };
+
     return (
       <DrawerContentScrollView contentContainerStyle={{ flex: 1 }}>
         <View
@@ -27,7 +35,35 @@ const DrawerNavigator = () => {
         >
           <Text style={{ color: "#fff" }}>Home</Text>
         </View>
+
         <DrawerItemList {...props} />
+        <View
+          style={{
+            padding: 20,
+            borderTopWidth: 1,
+            borderTopColor: "#ccc",
+            marginTop: 400,
+          }}
+        >
+          <TouchableOpacity
+            onPress={() => {
+              handleSignout();
+            }}
+            style={{ paddingVertical: 15 }}
+          >
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <Text
+                style={{
+                  fontSize: 15,
+                  fontFamily: "Roboto-Medium",
+                  marginLeft: 5,
+                }}
+              >
+                Sign out
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
       </DrawerContentScrollView>
     );
   };

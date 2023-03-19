@@ -1,22 +1,17 @@
 import "react-native-gesture-handler";
-import React from "react";
+import React, { useState } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import DrawerNavigator from "./src/navigation/DrawerNavigator";
-
-const Stack = createStackNavigator();
+import LoginStackNavigator from "./src/navigation/stack-navigators/LoginStackNavigator";
+import MainLayout from "./src/MainLayout";
+import { UserProvider } from "./src/UserContext";
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="DrawerNavigator">
-        <Stack.Screen
-          name="DrawerNavigator"
-          component={DrawerNavigator}
-          options={{ headerShown: false }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <UserProvider>
+      <MainLayout />
+    </UserProvider>
   );
 };
 
