@@ -57,7 +57,6 @@ const DrawerNavigator = () => {
               <Text
                 style={{
                   fontSize: 15,
-                  fontFamily: "Roboto-Medium",
                   marginLeft: 5,
                 }}
               >

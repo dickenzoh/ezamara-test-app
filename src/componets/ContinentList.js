@@ -10,13 +10,13 @@ const ContinentList = ({ continents }) => {
         keyExtractor={(_, index) => {
           return index.toString();
         }}
-        renderItem={({ item }) => <UserListItem continent={item} />}
+        renderItem={({ item }) => <ContinentListItem continent={item} />}
       />
     </>
   );
 };
 
-const UserListItem = ({ continent }) => {
+const ContinentListItem = ({ continent }) => {
   return (
     <View style={{ paddingHorizontal: 15 }}>
       <View

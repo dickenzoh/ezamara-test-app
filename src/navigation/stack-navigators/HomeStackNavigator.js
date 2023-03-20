@@ -11,9 +11,6 @@ const HomeStackNavigator = () => {
   const [currUser, setCurrUser] = useState("");
 
   const { user } = useContext(UserContext);
-  console.log(currUser);
-  //console.log(currUser.users);
-  //currUser.users.map((user) => console.log(user));
 
   useEffect(() => {
     fetch(`https://dummyjson.com/users/filter?key=email&value=${user.email}`)
@@ -52,11 +49,10 @@ const HomeStackNavigator = () => {
               <Text
                 style={{
                   fontSize: 18,
-                  fontFamily: "Roboto-Medium",
                   marginTop: 10,
                 }}
               >
-                Welcome {`${user.firstName} ${user.lastName}`}
+                Welcome {`${user?.firstName} ${user?.lastName}`}
               </Text>
               <Text
                 style={{
@@ -77,7 +73,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
@@ -86,7 +81,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
@@ -95,7 +89,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
@@ -104,7 +97,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
@@ -113,7 +105,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
@@ -122,7 +113,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
@@ -131,7 +121,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
@@ -140,7 +129,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
@@ -149,7 +137,6 @@ const HomeStackNavigator = () => {
                 <Text
                   style={{
                     fontSize: 18,
-                    fontFamily: "Roboto-Medium",
                     marginTop: 10,
                   }}
                 >
